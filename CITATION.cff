@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ThermalBudget"
+abstract: ""Sustained on-board throughput of an autonomy or GNC pipeline AFTER the board reaches thermal equilibrium, against the short-burst figure a datasheet or a cold benchmark reports, with the gap between them as the headline output. Baseline 1 the cold-burst benchmark, implemented deliberately as the thing being refuted because it is what a bench measurement produces; baseline 2 a first-order thermal RC network fitted to the measured die-temperature rise giving the throttled steady-state clock in closed form; baseline 3 ground truth directly measured sustained throughput and die temperature from a soak run on the board, with the run-to-run spread reported as a bootstrap interval. Learned thermal-state predictor mapping a short warm-up trace to the eventual steady state, scored on held-out DUTY CYCLES and held-out AMBIENT conditions separately because a model can pass one and fail the other, with the expected result that the RC model is competitive and any learned margin is smaller than the run-to-run interval. WHAT IT DOES THAT EXISTING TOOLS DO NOT: thermal benchmarking tools report temperature and clock traces; none of them converts the throttled steady state into a sustained mission throughput with an interval attached, and none reports the cold-burst overstatement as its headline.""
+type: software
+authors:
+  - family-names: "Acharya"
+    given-names: "Om"
+    alias: "OmAcharya-avtr"
+repository-code: "https://github.com/OmAcharya-avtr/thermalbudget"
+license: "Apache-2.0"
+version: "0.1.0"
+date-released: "2026-08-30"
+keywords:
+  - aerospace
+  - hardware-in-the-loop
